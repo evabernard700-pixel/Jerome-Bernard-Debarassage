@@ -1,0 +1,530 @@
+<!DOCTYPE html>
+
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jérome Bernard Débarassage - Puy-de-Dôme</title>
+
+```
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: Arial, sans-serif;
+    }
+
+    body {
+        color: #222;
+        background: #f8f9fa;
+    }
+
+    header {
+        background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
+        url("image/van.jpeg");
+        background-size: cover;
+        background-position: center;
+        height: 90vh;
+        color: white;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+
+    header img {
+        width: 300px;
+        margin-bottom: 20px;
+    }
+
+    header h1 {
+        font-size: 45px;
+        margin-bottom: 15px;
+    }
+
+    header p {
+        font-size: 22px;
+    }
+
+    .btn {
+        margin-top: 30px;
+        padding: 15px 30px;
+        background: #f58220;
+        color: white;
+        text-decoration: none;
+        border-radius: 30px;
+        transition: 0.3s;
+    }
+
+    .btn:hover {
+        background: #d96500;
+    }
+
+    section {
+        padding: 60px 10%;
+    }
+
+    h2 {
+        text-align: center;
+        color: #0b1f3a;
+        margin-bottom: 40px;
+        font-size: 32px;
+    }
+
+    .services {
+        display: flex;
+        gap: 25px;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .card {
+        background: white;
+        padding: 25px;
+        width: 280px;
+        border-radius: 15px;
+        box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        transition: 0.3s;
+    }
+
+    .card:hover {
+        transform: translateY(-8px);
+    }
+
+    .card h3 {
+        color: #0b1f3a;
+        margin-bottom: 15px;
+    }
+
+    .objets {
+        display: flex;
+        gap: 25px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .objet {
+        background: white;
+        width: 280px;
+        border-radius: 15px;
+        overflow: hidden;
+        box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    }
+
+    .objet img {
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.objet img:hover {
+    transform: scale(1.05);
+}
+}
+
+    .objet div {
+        padding: 20px;
+            text-align: center;
+    }
+
+    .prix {
+        color: #f58220;
+        font-size: 20px;
+        font-weight: bold;
+    }
+
+    .contact {
+        background: #0b1f3a;
+        color: white;
+        text-align: center;
+    }
+
+    form {
+        max-width: 500px;
+        margin: auto;
+    }
+
+    input, textarea {
+        width: 100%;
+        padding: 15px;
+        margin: 10px 0;
+        border-radius: 8px;
+        border: none;
+    }
+
+    button {
+        padding: 15px 30px;
+        background: #f58220;
+        color: white;
+        border: none;
+        border-radius: 30px;
+        cursor: pointer;
+    }
+
+    footer {
+        text-align: center;
+        padding: 20px;
+        background: #071426;
+        color: white;
+    }
+
+
+    @media(max-width:700px){
+
+        header h1 {
+            font-size: 32px;
+        }
+
+        section {
+            padding: 40px 5%;
+        }
+    }
+.photos-objet {
+    display: flex;
+    gap: 10px;
+    padding: 10px;
+    width: 100%;
+}
+}
+
+.photos-objet img {
+    width: 50%;
+    height: 100px !important;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.photo-vente {
+    width: 50%;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.photo-vente:hover {
+    transform: scale(1.08);
+}
+.image-grand {
+    display: none;
+    position: fixed;
+    z-index: 9999;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.9);
+    justify-content: center;
+    align-items: center;
+}
+
+.image-grand img {
+    max-width: 90%;
+    max-height: 90%;
+    border-radius: 10px;
+}
+
+.fermer {
+    position: absolute;
+    top: 20px;
+    right: 40px;
+    color: white;
+    font-size: 50px;
+    cursor: pointer;
+}
+.objet h3,
+.objet p {
+    text-align: center;
+}
+.photos-objet:has(img:only-child) {
+    justify-content: center;
+}
+
+.photos-objet img:only-child {
+    width: 85%;
+    height: 220px;
+}
+</style>
+```
+
+</head>
+
+<body>
+
+<header>
+
+```
+<!-- Remplacer plus tard par le vrai logo -->
+<img src="image/jérome débarassage.png" alt="Logo jérome débarassage">
+
+<h1>Jérome Bernard Débarassage
+</h1>
+
+<p>Débarassage professionnels dans le Puy-de-Dôme (63)</p>
+
+<a class="btn" href="#contact">Me contacter</a>
+```
+
+</header>
+
+<section>
+
+<h2>Mes services</h2>
+
+<div class="services">
+
+<div class="card">
+<h3>Débarassage particuliers</h3>
+<p>
+Accompagnement complet pour vos débarassages de Granges, Caves, Greniers, Appartements, Maisons
+</p>
+</div>
+
+<div class="card">
+<h3>Transport de meubles</h3>
+<p>
+Transport sécurisé de vos meubles et objets.
+</p>
+</div>
+
+<div class="card">
+<h3>Chargement et déchargement</h3>
+<p>
+ Disponible pour vous aider du début à la fin.
+</p>
+</div>
+
+<div class="card">
+<h3>Secteur d'intervention</h3>
+<p>
+Intervention dans tout le département du Puy-de-Dôme (63).
+</p>
+</div>
+
+</div>
+
+<```html
+<section>
+
+<h2>Objets à vendre</h2>
+
+<div class="objets">
+
+    <!-- Objet 1 -->
+    <div class="objet">
+
+        <div class="photos-objet">
+            <img class="photo-vente" src="image/buffet 1.jpeg" alt="Photo 1">
+            <img class="photo-vente" src="image/buffet 2.jpeg" alt="Photo 2">
+        </div>
+
+        <div class="texte-objet">
+            <h3>Confiturier</h3>
+
+            <p>
+                Petit confiturier en bois décoré.
+            </p>
+
+            <p class="prix">
+                Prix : 50€
+            </p>
+        </div>
+
+    </div>
+
+    <!-- Objet 2 -->
+    <div class="objet">
+
+        <div class="photos-objet">
+            <img class="photo-vente" src="image/meuble 1.jpeg" alt="Photo 1">
+            <img class="photo-vente" src="image/meuble 2.jpeg" alt="Photo 2">
+        </div>
+
+        <div class="texte-objet">
+            <h3>Secrétaire</h3>
+
+            <p>
+                Petit secrétaire avec placage et petits tiroirs, le dessus est en marbre.
+            </p>
+
+            <p class="prix">
+                Prix : 120€
+            </p>
+        </div>
+
+    </div>
+<!-- Objet 3 -->
+    <div class="objet">
+
+        <div class="photos-objet">
+            <img class="photo-vente" src="image/bibliothèque.jpeg" alt="Photo 1">
+        </div>
+
+        <div class="texte-objet">
+            <h3>Vitrine style Napoléon</h3>
+
+            <p>
+                Celle-ci est vendu démontée 
+            </p>
+
+            <p class="prix">
+                Prix : 150€
+            </p>
+        </div>
+
+    </div>
+   <!-- Objet 4 -->
+    <div class="objet">
+
+        <div class="photos-objet">
+            <img class="photo-vente" src="image/couteaux.jpeg" alt="Photo 1">
+        </div>
+
+        <div class="texte-objet">
+            <h3>Sabres Marocains</h3>
+
+            <p>
+                Lot de deux ancienss sabres marocains avec étuits en bois
+            </p>
+
+            <p class="prix">
+                Prix : 70€
+            </p>
+        </div>
+
+    </div> 
+    ```html
+<!-- Objet : Affiches A3 -->
+<div class="objet">
+
+    <div class="photos-objet">
+
+        <img class="photo-vente" src="image/affiche 1.jpeg" alt="Affiche 1">
+        <img class="photo-vente" src="image/affiche 2.jpeg" alt="Affiche 2">
+        <img class="photo-vente" src="image/affiche 3.jpeg" alt="Affiche 3">
+
+    </div>
+
+    <div class="texte-objet">
+
+        <h3>Affiches anciennes - Format A3</h3>
+
+        <p>
+            Plusieurs modèles disponibles.<br>
+            Les affiches sont vendues à l'unité.
+        </p>
+
+        <p class="prix">
+            Prix : 5 € / unité
+        </p>
+
+    </div>
+
+</div>
+```
+
+</div>
+
+</section>
+```
+
+
+<section>
+
+<h2>À propos</h2>
+
+<p style="text-align:center; max-width:800px; margin:auto;">
+
+J'accompagne les particuliers
+dans leurs projets de débarassage dans le Puy-de-Dôme.
+Une entreprise sérieuse, proche de ses clients,
+avec un service simple, efficace et professionnel.
+
+</p>
+
+</section>
+
+<section class="contact" id="contact">
+
+<h2>Contact</h2>
+
+<p>
+Téléphone : 06 40 93 88 38
+</p>
+
+<p>
+Email : jerobernard@wanadoo.fr
+</p>
+
+<br>
+
+<form>
+
+<input type="text" placeholder="Votre nom">
+
+<input type="email" placeholder="Votre email">
+
+<textarea rows="5" placeholder="Votre message"></textarea>
+
+<button>
+Envoyer
+</button>
+
+</form>
+
+</section>
+
+<footer>
+
+<p>
+© 2026 Bernard Débarassage - Puy-de-Dôme (63)
+</p>
+
+</footer>
+<div id="image-grand" class="image-grand">
+    <span class="fermer">&times;</span>
+    <img id="image-ouverte">
+</div>
+<script>
+
+let images = document.querySelectorAll(".photo-vente");
+let grandeImage = document.getElementById("image-grand");
+let imageOuverte = document.getElementById("image-ouverte");
+let fermer = document.querySelector(".fermer");
+
+
+images.forEach(image => {
+
+    image.onclick = function(){
+
+        grandeImage.style.display = "flex";
+        imageOuverte.src = this.src;
+
+    }
+
+});
+
+
+fermer.onclick = function(){
+
+    grandeImage.style.display = "none";
+
+}
+
+
+grandeImage.onclick = function(e){
+
+    if(e.target == grandeImage){
+
+        grandeImage.style.display = "none";
+
+    }
+
+}
+
+</script>
+</body>
+
+</html>
